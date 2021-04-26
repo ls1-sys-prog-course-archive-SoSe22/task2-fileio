@@ -14,11 +14,11 @@ all:
 
 # C example:
 #all:
-#	$(CC) $(CFLAGS) -o task-name task-name.c
+#	$(CC) $(CFLAGS) -o memfs memfs.c `pkg-config fuse --cflags --libs`
 
 # C++ example:
 #all:
-#	$(CXX) $(CXXFLAGS) -o task-name task-name.cpp
+#	$(CXX) $(CXXFLAGS) -o memfs memfs.cpp `pkg-config fuse --cflags --libs`
 
 # Rust example:
 #all:
