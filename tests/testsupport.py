@@ -143,6 +143,12 @@ def run_project_executable(
     input: Optional[str] = None,
     check: bool = True,
 ) -> "subprocess.CompletedProcess[Text]":
+    run_find_project_executable(exe)
+    return run([fullpath] + args, extra_env, stdin, stdout, input=input, check=check)
+
+def run_find_project_executable(
+    exe: str,
+) -> str:
     path = project_path()
     fullpath = find_executable(exe, path)
     if fullpath is None:
@@ -152,8 +158,8 @@ def run_project_executable(
         raise OSError(
             f"executable '{exe}' not found. The following locations where considered:\n  {locations}"
         )
-    return run([fullpath] + args, extra_env, stdin, stdout, input=input, check=check)
-
+    
+    return fullpath
 
 def run(
     cmd: List[str],
@@ -214,7 +220,7 @@ def subtest(msg: str) -> Iterator[None]:
     """
     Run a subtest, if it fails it will exit the program while printing the error
     """
-    caller = getframeinfo(stack()[2][0])
+    caller = getframeinfo(stack()[1][0])
     info(msg + "...")
     try:
         yield
