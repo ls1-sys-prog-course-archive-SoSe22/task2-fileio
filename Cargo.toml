@@ -1,5 +1,5 @@
 [package]
-name = "task-name"
+name = "memfs"
 edition = "2018"
 version = "0.1.0"
 
@@ -7,3 +7,5 @@ version = "0.1.0"
 
 [dependencies]
 nix = "0.20.0"
+fuser = "0.4"
+libc = "0.2"
