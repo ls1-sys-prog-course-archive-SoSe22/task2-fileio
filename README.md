@@ -93,7 +93,7 @@ Where the argument "mount point" is the directory where the filesystem will be m
 5. The ability to append data to an existing file.
 
 You are free to choose any data structure to manage filesystem data and metadata. To ensure that the filesystem has the above functionality the following functions must be implemented from the fuse API:
-- lookup
+- lookup (mandatory in rust)
 - getattr
 - read
 - write
