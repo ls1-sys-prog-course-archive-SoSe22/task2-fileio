@@ -5,7 +5,7 @@ to create their own file system without editing kernel code. On successful
 completion of this excercise you will have a good understanding of filesystem
 data structures and how filesystem operations are mapped onto these data structures.
 You will create the filesystem in a system programming language (C, C++ or Rust) of your choice. 
-This assignment will be graded for a total of **100 points**.
+This assignment will be graded for a total of **30 points**.
 
 Once your repository is created from the general template,
 the continous integration services will build your project and will run
@@ -69,7 +69,7 @@ with [docker](https://www.docker.com/) using this [container
 
 ## The assignment for this week
 
-Your task is to implement an in-memory filesystem, by implementing the filesystem's data structures and
+Your task is to implement an **in-memory** filesystem, by implementing the filesystem's data structures and
 file operations that correctly manipulate them. Please note that you will be graded against the correctness of your implementation only. We do not check for performance. However, it is a good practice to figure out what data structures are necessary to efficiently support the respective file operations. The filesystem should be implemented with the following constraints:
 - Maximum file name length of 255 ascii characters.
 - Maximum file size of 512 bytes.
