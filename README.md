@@ -30,7 +30,7 @@ At the time of writing the following set up is installed:
 - C/C++ compilers: gcc (different versions from 7. to 10 i.e. gcc-10), clang 6-9
 - C/C++ build systems: cmake: 3.19.6 autoconf: 2.69, automake: 1.15.1
 - Rust compiler/build system: rustc / cargo: 1.51.0
-- 
+- fuse: 2.9.9-3
 
 ## Tests
 
@@ -94,7 +94,7 @@ Where the argument "mount point" is the directory where the filesystem will be m
 5. The ability to append data to an existing file.
 
 You are free to choose any data structure to manage filesystem data and metadata. To ensure that the filesystem has the above functionality the following functions must be implemented from the fuse API:
-- lookup (mandatory of you implement based on a low level interface with inodes)
+- lookup (mandatory if you implement based on a low level interface with inodes)
 - getattr
 - read
 - write
