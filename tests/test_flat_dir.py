@@ -4,12 +4,14 @@ import sys, os, tempfile
 from pathlib import Path
 
 from testsupport import run, run_project_executable, run_find_project_executable, subtest
-from fuse_helpers import run_background, fuse_unmount, fuse_mount, gen_mnt_path
+from fuse_helpers import run_background, fuse_unmount, fuse_mount, gen_mnt_path, fuse_check_mnt
 
 def main() -> None:
     with tempfile.TemporaryDirectory() as tmpdir:
         temp_path = Path(tmpdir)
         mnt_path  = fuse_mount(temp_path, "memfs_mnt")
+
+        fuse_check_mnt(tmpdir, mnt_path)
 
         with subtest("Create flat directories"):
             dir_list = ["foo", "bar", "foobar", "barfoo"]

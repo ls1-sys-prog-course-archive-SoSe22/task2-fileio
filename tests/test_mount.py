@@ -4,7 +4,7 @@ import sys, os, tempfile
 from pathlib import Path
 
 from testsupport import run, run_project_executable, run_find_project_executable, subtest
-from fuse_helpers import run_background, fuse_unmount, fuse_mount, gen_mnt_path
+from fuse_helpers import run_background, fuse_unmount, fuse_mount, gen_mnt_path, fuse_check_mnt
 
 def main() -> None:
     with tempfile.TemporaryDirectory() as tmpdir:
@@ -12,20 +12,7 @@ def main() -> None:
         mnt_path  = fuse_mount(temp_path, "memfs_mnt")
 
         with subtest("Check mount"):
-            with open(f'{tmpdir}/stdout', 'w+') as stdout:
-                run(
-                    ["mount"],
-                    stdout=stdout,
-                )
-            with open(f'{tmpdir}/stdout') as stdin:
-                try:
-                    run(
-                        ["grep", "memfs"],
-                        stdin=stdin,
-                    )
-                except Exception as e:
-                    fuse_unmount(mnt_path)
-                    sys.exit(1)
+            fuse_check_mnt(tmpdir, mnt_path)
         fuse_unmount(mnt_path)
         sys.exit(0)
 
