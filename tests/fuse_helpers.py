@@ -46,12 +46,20 @@ def fuse_check_mnt(tmpdir: str, mnt_path: str) -> None:
             ["mount"],
             stdout=stdout,
         )
+
     with open(f'{tmpdir}/stdout') as stdin:
-        try:
-            run(
-                ["grep", "memfs"],
-                stdin=stdin,
-            )
-        except Exception as e:
+        found = False
+
+        for line in stdin.readlines():
+            parts = line.split(" ")
+
+            fs_spec = parts[0]            
+            fs_path = Path(parts[2])
+
+            if fs_spec == "memfs" and fs_path == mnt_path:
+                found = True
+
+        if not found:
+            print(f"memfs not found at {mnt_path}")
             fuse_unmount(mnt_path)
-            sys.exit(1)
+            exit(1)
