@@ -7,14 +7,14 @@ import os
 from pathlib import Path
 from typing import IO, Any, Callable, Dict, List, Optional, Text, Union, Iterator
 
-from testsupport import run, run_find_project_executable, subtest, assert_executable
+from testsupport import run, subtest, assert_executable, find_project_executable
 
 def fuse_mount(temp_path: Path, mt_pt: str) -> str:
     assert_executable("fusermount", "fusermount not found")
     mnt_path = gen_mnt_path(temp_path, mt_pt)
     
     with subtest("Mount filesystem"):
-        exe_path = run_find_project_executable("memfs")
+        exe_path = find_project_executable("memfs")
         try:
             proc = run_background([exe_path, mnt_path])
         except Exception as e:
