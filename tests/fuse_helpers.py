@@ -7,14 +7,14 @@ import os
 from pathlib import Path
 from typing import IO, Any, Callable, Dict, List, Optional, Text, Union, Iterator
 
-from testsupport import run, run_find_project_executable, subtest, assert_executable
+from testsupport import run, subtest, assert_executable, find_project_executable
 
 def fuse_mount(temp_path: Path, mt_pt: str) -> str:
     assert_executable("fusermount", "fusermount not found")
     mnt_path = gen_mnt_path(temp_path, mt_pt)
     
     with subtest("Mount filesystem"):
-        exe_path = run_find_project_executable("memfs")
+        exe_path = find_project_executable("memfs")
         try:
             proc = run_background([exe_path, mnt_path])
         except Exception as e:
@@ -46,12 +46,20 @@ def fuse_check_mnt(tmpdir: str, mnt_path: str) -> None:
             ["mount"],
             stdout=stdout,
         )
+
     with open(f'{tmpdir}/stdout') as stdin:
-        try:
-            run(
-                ["grep", "memfs"],
-                stdin=stdin,
-            )
-        except Exception as e:
+        found = False
+
+        for line in stdin.readlines():
+            parts = line.split(" ")
+
+            fs_spec = parts[0]            
+            fs_path = Path(parts[2])
+
+            if fs_spec == "memfs" and fs_path == mnt_path:
+                found = True
+
+        if not found:
+            print(f"memfs not found at {mnt_path}")
             fuse_unmount(mnt_path)
-            sys.exit(1)
+            exit(1)

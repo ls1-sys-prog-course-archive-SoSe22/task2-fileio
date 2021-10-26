@@ -3,7 +3,7 @@
 import sys, os, tempfile, subprocess
 from pathlib import Path
 
-from testsupport import run, run_project_executable, run_find_project_executable, subtest
+from testsupport import run, run_project_executable, subtest
 from fuse_helpers import run_background, fuse_unmount, fuse_mount, gen_mnt_path, fuse_check_mnt
 
 def main() -> None:
