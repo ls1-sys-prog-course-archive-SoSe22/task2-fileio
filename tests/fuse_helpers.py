@@ -56,7 +56,7 @@ def fuse_check_mnt(tmpdir: str, mnt_path: str) -> None:
             fs_spec = parts[0]            
             fs_path = Path(parts[2])
 
-            if fs_spec == "memfs" and fs_path == mnt_path:
+            if "memfs" in fs_spec and fs_path == mnt_path:
                 found = True
 
         if not found:
