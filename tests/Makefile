@@ -5,6 +5,7 @@ check:
 	$(PYTHON3) ./test_mnt_is_dir.py
 	$(PYTHON3) ./test_empty_dir.py
 	$(PYTHON3) ./test_flat_dir.py
+	$(PYTHON3) ./test_returns_correct_size.py
 	$(PYTHON3) ./test_flat_file.py
 	$(PYTHON3) ./test_hier_dir.py
 	$(PYTHON3) ./test_hier_file.py
@@ -14,3 +15,4 @@ check:
 	$(PYTHON3) ./test_name_check_same_file_file.py
 	$(PYTHON3) ./test_flat_file_io_write.py
 	$(PYTHON3) ./test_flat_file_io_append.py
+	$(PYTHON3) ./test_symlink.py
