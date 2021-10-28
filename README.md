@@ -93,7 +93,12 @@ Where the argument "mount point" is the directory where the filesystem will be m
 
 5. The ability to append data to an existing file.
 
+6. The ability to create symlinks to files
+
+7. Additionally, the filesystem needs to return correct filesizes after write operations
+
 You are free to choose any data structure to manage filesystem data and metadata. To ensure that the filesystem has the above functionality the following functions must be implemented from the fuse API:
+
 - lookup (mandatory if you implement based on a low level interface with inodes)
 - getattr
 - read
@@ -103,6 +108,8 @@ You are free to choose any data structure to manage filesystem data and metadata
 - mknod
 - open
 - create
+- readlink
+- symlink
 
 ## Going further
 
