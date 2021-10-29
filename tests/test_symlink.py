@@ -22,6 +22,11 @@ def main() -> None:
 
             os.symlink(sourcepath, destpath)
 
+            if not os.path.islink(destpath):
+                print(f"{destpath} is not a symbolic link")
+                fuse_unmount(mnt_path)
+                exit(1)
+
             num_bytes = random.randint(1, 512)
 
             with open(sourcepath, "wb") as f:
