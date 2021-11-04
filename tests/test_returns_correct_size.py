@@ -17,7 +17,7 @@ def main() -> None:
             filename = "foo"
             filepath = os.path.join(mnt_path, filename)
 
-            num_bytes = random.randint(1_000, 10_000)
+            num_bytes = random.randint(1, 512)
             with open(filepath, "wb") as f:
                 bytes = os.urandom(num_bytes)
                 f.write(bytes)
