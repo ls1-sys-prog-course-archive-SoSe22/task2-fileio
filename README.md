@@ -21,7 +21,7 @@ All assignments will try to build the `all` target within the Makefile like this
 $ make all
 ```
 
-So make sure your that the `all` target will produce all executables required for the
+So make sure your that your `all` target will produce all executables required for the
 tests. 
 
 The github build environment comes with all tools for building C, C++ and Rust pre-installed.
@@ -61,7 +61,7 @@ $ make check
 
 For the rare occassion that bugs are experienced in the CI but not
 locally, it is also possible to run the github action environment locally
-with [docker](https://www.docker.com/) using this [container
+with [docker](https://www.docker.com/) using this [container](https://github.com/orgs/ls1-courses/packages/container/package/ls1-runner).
 
 ``` console
 # This will mount your current directory as /code into the container
