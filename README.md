@@ -57,8 +57,6 @@ For convenience our Makefile also comes with `check` target which will run all t
 $ make check
 ```
 
-- All tasks use https://github.com/ls1-courses/task-template as a template
-
 For the rare occassion that bugs are experienced in the CI but not
 locally, it is also possible to run the github action environment locally
 with [docker](https://www.docker.com/) using this [container](https://github.com/orgs/ls1-courses/packages/container/package/ls1-runner).
