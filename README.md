@@ -73,6 +73,8 @@ file operations that correctly manipulate them. Please note that you will be gra
 - Maximum file name length of 255 ascii characters.
 - Maximum file size of 512 bytes.
 
+For rust implementations: You can find useful depedencies in `Cargo.toml`. Also, set the `fuser::MountOption::FSName` to `memfs`.
+
 ### Deliverables
 
 1. A mountable filesystem with the correct file type (directory). It should be possible to mount the filesystem as follows:
