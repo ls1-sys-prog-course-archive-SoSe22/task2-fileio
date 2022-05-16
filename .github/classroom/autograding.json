@@ -3,7 +3,7 @@
     {
       "name": "Build",
       "setup": "",
-      "run": "make all",
+      "run": "timeout 5m make all",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -13,7 +13,7 @@
     {
       "name": "Test mount",
       "setup": "",
-      "run": "python3 tests/test_mount.py",
+      "run": "timeout 1m python3 tests/test_mount.py",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -23,7 +23,7 @@
     {
       "name": "Test mount is directory",
       "setup": "",
-      "run": "python3 tests/test_mnt_is_dir.py",
+      "run": "timeout 1m python3 tests/test_mnt_is_dir.py",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -33,7 +33,7 @@
     {
       "name": "Test mount is empty",
       "setup": "",
-      "run": "python3 tests/test_empty_dir.py",
+      "run": "timeout 1m python3 tests/test_empty_dir.py",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -43,7 +43,7 @@
     {
       "name": "Test if filesystem returns correct filesize",
       "setup": "",
-      "run": "python3 tests/test_returns_correct_size.py",
+      "run": "timeout 1m python3 tests/test_returns_correct_size.py",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -53,7 +53,7 @@
     {
       "name": "Test flat directories",
       "setup": "",
-      "run": "python3 tests/test_flat_dir.py",
+      "run": "timeout 1m python3 tests/test_flat_dir.py",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -63,7 +63,7 @@
     {
       "name": "Test flat files",
       "setup": "",
-      "run": "python3 tests/test_flat_file.py",
+      "run": "timeout 1m python3 tests/test_flat_file.py",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -73,7 +73,7 @@
     {
       "name": "Test hierarchical directories",
       "setup": "",
-      "run": "python3 tests/test_hier_dir.py",
+      "run": "timeout 1m python3 tests/test_hier_dir.py",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -83,7 +83,7 @@
     {
       "name": "Test hierarchical files",
       "setup": "",
-      "run": "python3 tests/test_hier_file.py",
+      "run": "timeout 1m python3 tests/test_hier_file.py",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -93,7 +93,7 @@
     {
       "name": "Test check names when file created before dir",
       "setup": "",
-      "run": "python3 tests/test_name_check_file_first_dir.py",
+      "run": "timeout 1m python3 tests/test_name_check_file_first_dir.py",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -103,7 +103,7 @@
     {
       "name": "Test check names when dir created before file",
       "setup": "",
-      "run": "python3 tests/test_name_check_dir_first_file.py",
+      "run": "timeout 1m python3 tests/test_name_check_dir_first_file.py",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -113,7 +113,7 @@
     {
       "name": "Test check names when dir and file have same name",
       "setup": "",
-      "run": "python3 tests/test_name_check_same_file_dir.py",
+      "run": "timeout 1m python3 tests/test_name_check_same_file_dir.py",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -123,7 +123,7 @@
     {
       "name": "Test check names when file and file have same name",
       "setup": "",
-      "run": "python3 tests/test_name_check_same_file_file.py",
+      "run": "timeout 1m python3 tests/test_name_check_same_file_file.py",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -133,7 +133,7 @@
     {
       "name": "Test write and read on flat file",
       "setup": "",
-      "run": "python3 tests/test_flat_file_io_write.py",
+      "run": "timeout 1m python3 tests/test_flat_file_io_write.py",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -143,7 +143,7 @@
     {
       "name": "Test append on flat file",
       "setup": "",
-      "run": "python3 tests/test_flat_file_io_append.py",
+      "run": "timeout 1m python3 tests/test_flat_file_io_append.py",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -153,7 +153,7 @@
     {
       "name": "Test symlinks",
       "setup": "",
-      "run": "python3 tests/test_symlink.py",
+      "run": "timeout 1m python3 tests/test_symlink.py",
       "input": "",
       "output": "",
       "comparison": "included",
