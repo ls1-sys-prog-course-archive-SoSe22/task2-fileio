@@ -7,7 +7,7 @@
       "input": "",
       "output": "",
       "comparison": "included",
-      "timeout -s KILL": 5,
+      "timeout": 5,
       "points": 0
     },
     {
@@ -17,7 +17,7 @@
       "input": "",
       "output": "",
       "comparison": "included",
-      "timeout -s KILL": 1,
+      "timeout": 1,
       "points": 2
     },
     {
@@ -27,7 +27,7 @@
       "input": "",
       "output": "",
       "comparison": "included",
-      "timeout -s KILL": 1,
+      "timeout": 1,
       "points": 1
     },
     {
@@ -37,7 +37,7 @@
       "input": "",
       "output": "",
       "comparison": "included",
-      "timeout -s KILL": 1,
+      "timeout": 1,
       "points": 1
     },
     {
@@ -47,7 +47,7 @@
       "input": "",
       "output": "",
       "comparison": "included",
-      "timeout -s KILL": 1,
+      "timeout": 1,
       "points": 1
     },
     {
@@ -57,7 +57,7 @@
       "input": "",
       "output": "",
       "comparison": "included",
-      "timeout -s KILL": 1,
+      "timeout": 1,
       "points": 2
     },
     {
@@ -67,7 +67,7 @@
       "input": "",
       "output": "",
       "comparison": "included",
-      "timeout -s KILL": 1,
+      "timeout": 1,
       "points": 2
     },
     {
@@ -77,7 +77,7 @@
       "input": "",
       "output": "",
       "comparison": "included",
-      "timeout -s KILL": 1,
+      "timeout": 1,
       "points": 2
     },
     {
@@ -87,7 +87,7 @@
       "input": "",
       "output": "",
       "comparison": "included",
-      "timeout -s KILL": 1,
+      "timeout": 1,
       "points": 2
     },
     {
@@ -97,7 +97,7 @@
       "input": "",
       "output": "",
       "comparison": "included",
-      "timeout -s KILL": 1,
+      "timeout": 1,
       "points": 2
     },
     {
@@ -107,7 +107,7 @@
       "input": "",
       "output": "",
       "comparison": "included",
-      "timeout -s KILL": 1,
+      "timeout": 1,
       "points": 2
     },
     {
@@ -117,7 +117,7 @@
       "input": "",
       "output": "",
       "comparison": "included",
-      "timeout -s KILL": 1,
+      "timeout": 1,
       "points": 2
     },
     {
@@ -127,7 +127,7 @@
       "input": "",
       "output": "",
       "comparison": "included",
-      "timeout -s KILL": 1,
+      "timeout": 1,
       "points": 2
     },
     {
@@ -137,7 +137,7 @@
       "input": "",
       "output": "",
       "comparison": "included",
-      "timeout -s KILL": 1,
+      "timeout": 1,
       "points": 3
     },
     {
@@ -147,7 +147,7 @@
       "input": "",
       "output": "",
       "comparison": "included",
-      "timeout -s KILL": 1,
+      "timeout": 1,
       "points": 3
     },
     {
@@ -157,7 +157,7 @@
       "input": "",
       "output": "",
       "comparison": "included",
-      "timeout -s KILL": 1,
+      "timeout": 1,
       "points": 3
     }
   ]
